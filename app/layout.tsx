@@ -5,7 +5,8 @@ import "./globals.css";
 
 // components
 import Header from "@/components/Header";
-
+import PageTransition from "@/components/PageTransition";
+import StairEffect from "@/components/StairEffect";
 
 
 // const geistSans = localFont({
@@ -37,9 +38,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${jetbrainsMono.variable}  antialiased`}
-      ><Header />
-        {children}
+        className={`${jetbrainsMono.variable}  antialiased`}>
+          <Header />
+          <StairEffect />
+          <PageTransition>
+            {children}
+          </PageTransition>
+
+        
       </body>
     </html>
   );
