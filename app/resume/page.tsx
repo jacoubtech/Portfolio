@@ -48,10 +48,76 @@ const about = {
 // about Experience
 
 const experience = {
-  title: 'About me',
+  icon: "/assets/resume/badge.svg",
+  title: "My Experience",
   Description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam totam exercitationem unde esse numquam quas incidunt optio.",
-  info: []
+  items: [
+    {
+    company: "Esaboura",
+    position: "Video Editor",
+    duration: "2022 - Present", 
+    },
+    {
+      company: "Esaboura",
+      position: "Graphic Designer",
+      duration: "2022 - Present", 
+    },
+    {
+      company: "Esaboura",
+      position: "Photo/Video-Grapher",
+      duration: "2022 - Present", 
+    },
+    {
+      company: "Esaboura",
+      position: "Community Manager",
+      duration: "2023 - Present", 
+    },
+    {
+      company: "Esaboura",
+      position: "Sales Marketing",
+      duration: "2023 - Present", 
+    },
+    {
+      company: "PharmaSetif",
+      position: "Freelance Video Producer",
+      duration: "11-2022 - 02-2023", 
+    },
+    {
+      company: "MKTech",
+      position: "Freelance UI/UX Designer",
+      duration: "03-2023 - 08-2023", 
+    },
+    {
+      company: "StartUP Click Med",
+      position: "Freelance UI/UX Designer",
+      duration: "01-2023 - 06-2024", 
+    },
+  ]
   };
+
+  // Education Data
+  const education = {
+    icon: "/assets/resume/badge.svg",
+    title: "My education",
+    Description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam totam exercitationem unde esse numquam quas incidunt optio.",
+    items: [
+      {
+      institution: "Ferhat Abbas University",
+      Degree: "Licence Degree Diploma in Computer Science",
+      duration: "2017 - 2020", 
+      },
+      {
+        institution: "Ferhat Abbas University",
+        Degree: "Master Degree Diploma in Computer Science - Networking and Distributed Systems",
+        duration: "2020 - 2022", 
+      },
+      {
+        institution: "Esaboura",
+        Degree: "Meta Ads - Facebook & Instagram",
+        duration: "2024", 
+      },
+    ]
+    };
 const resume = () => {
   return (
     <div>resume page</div>
