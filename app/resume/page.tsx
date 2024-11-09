@@ -9,7 +9,7 @@ import {SiTailwindcss, SiNextdotjs} from "react-icons/si";
 
 const about = {
   title: 'About me',
-  Description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam totam exercitationem unde esse numquam quas incidunt optio.",
+  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam totam exercitationem unde esse numquam quas incidunt optio.",
   info: [
     {
       fieldName: 'Name',
@@ -50,7 +50,7 @@ const about = {
 const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My Experience",
-  Description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam totam exercitationem unde esse numquam quas incidunt optio.",
+  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam totam exercitationem unde esse numquam quas incidunt optio.",
   items: [
     {
     company: "Esaboura",
@@ -99,7 +99,7 @@ const experience = {
   const education = {
     icon: "/assets/resume/badge.svg",
     title: "My education",
-    Description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam totam exercitationem unde esse numquam quas incidunt optio.",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam totam exercitationem unde esse numquam quas incidunt optio.",
     items: [
       {
       institution: "Ferhat Abbas University",
@@ -113,14 +113,125 @@ const experience = {
       },
       {
         institution: "Esaboura",
-        Degree: "Meta Ads - Facebook & Instagram",
+        Degree: "Diploma in Meta Ads - Facebook & Instagram",
         duration: "2024", 
       },
     ]
     };
+
+    // Skills Data
+  const skills = {
+    title: "My skills",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam totam exercitationem unde esse numquam quas incidunt optio.",
+    skillslist: [
+      {
+        icon: <FaHtml5 />,
+        name: "html 5", 
+      },
+      {
+        icon: <FaCss3 />,
+        name: "css 3", 
+      },
+      {
+        icon: <FaJs />,
+        name: "javascript", 
+      },
+      {
+        icon: <FaReact />,
+        name: "react.js", 
+      },
+      {
+        icon: <SiNextdotjs />,
+        name: "next.js", 
+      },
+      {
+        icon: <SiTailwindcss />,
+        name: "tailwind.css", 
+      },
+      {
+        icon: <FaNodeJs />,
+        name: "node.js", 
+      },
+      {
+        icon: <FaFigma />,
+        name: "figma", 
+      },
+    ]
+    };
+
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import { 
+        Tooltip, 
+        TooltipContent, 
+        TooltipProvider, 
+        TooltipTrigger 
+      } from "@/components/ui/tooltip";
+
+import { ScrollArea } from "@radix-ui/react-scroll-area";
+import { motion
+
+ } from "framer-motion";
+
 const resume = () => {
   return (
-    <div>resume page</div>
+    <motion.div initial={{opacity: 0}} 
+    animate={{
+      opacity: 1, 
+      transition: {delay: 2.4, duration: 0.4, ease: "easeIn"},
+  }}
+  
+  className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+  >
+    <div className="container mx-auto">
+      <Tabs defaultValue="experience" 
+            className="flex flex-col xl:flex-row gap-[60px]">
+        <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+          <TabsTrigger value="experience">Experience</TabsTrigger>
+          <TabsTrigger value="education">Education</TabsTrigger>
+          <TabsTrigger value="skills">Skills</TabsTrigger>
+          <TabsTrigger value="about">About me</TabsTrigger>
+        </TabsList>
+
+        {/* content */}
+        <div className="min-h-[70vh] w-full">
+          {/* experience */}
+          <TabsContent value="experience" className="w-full">
+            <div className="flex flex-col gap-[30px] text-center xl:text-left">
+              <h3 className="text-4xl font-bold">{experience.title}</h3>
+              <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{experience.description}</p>
+              <ScrollArea className="h-[480px]">
+                <ul>
+                  {experience.items.map((item, index)=>{
+                    return <li>
+                      <span>{item.duration}</span>
+                      <h3>{item.position}</h3>
+                      <div>
+                        {/* dot */}
+                        <span></span>
+                        <p>{item.company}</p>
+                      </div>
+                    </li>
+                  })}
+                </ul>
+              </ScrollArea>
+            </div>
+          </TabsContent>
+          {/* education */}
+          <TabsContent value="education" className="w-full">
+            education
+          </TabsContent>
+          {/* skills */}
+          <TabsContent value="skills" className="w-full">
+            skills
+          </TabsContent>
+          {/* about me */}
+          <TabsContent value="about" className="w-full">
+            about me
+          </TabsContent>
+        </div>
+      </Tabs>
+    </div>
+    </motion.div>
   )
 };
 
