@@ -199,21 +199,23 @@ const resume = () => {
             <div className="flex flex-col gap-[30px] text-center xl:text-left">
               <h3 className="text-4xl font-bold">{experience.title}</h3>
               <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{experience.description}</p>
-              <ScrollArea className="h-[480px]">
-                <ul>
-                  {experience.items.map((item, index)=>{
-                    return <li>
-                      <span>{item.duration}</span>
-                      <h3>{item.position}</h3>
-                      <div>
-                        {/* dot */}
-                        <span></span>
-                        <p>{item.company}</p>
-                      </div>
-                    </li>
-                  })}
-                </ul>
-              </ScrollArea>
+                <ScrollArea className="h-[480px] overflow-y-auto scrollbar-hide">
+                  <ul>
+                    {experience.items.map((item, index) => {
+                      return (
+                        <li key={index} className="mb-4">
+                          <span className="block text-sm text-gray-500">{item.duration}</span>
+                          <h3 className="text-lg font-semibold">{item.position}</h3>
+                          <div className="flex items-center mt-2">
+                            {/* dot */}
+                            <span className="w-2 h-2 bg-accent rounded-full mr-2"></span>
+                            <p className="text-sm text-gray-400">{item.company}</p>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </ScrollArea>
             </div>
           </TabsContent>
           {/* education */}
