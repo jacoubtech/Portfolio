@@ -7,6 +7,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairEffect from "@/components/StairEffect";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 
 // const geistSans = localFont({
@@ -39,6 +41,8 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${jetbrainsMono.variable}  antialiased`}>
+          <SpeedInsights/>
+          <Analytics/>
           <Header />
           <StairEffect />
           <PageTransition>
