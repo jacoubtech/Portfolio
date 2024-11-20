@@ -47,7 +47,7 @@ const contact = () => {
                 <Input type="firstname" placeholder="First Name"/>
                 <Input type="lastname" placeholder="Last Name"/>
                 <Input type="email" placeholder="Email Address"/>
-                <Input type="phone" placeholder="Phone Number"/>
+                <Input type="phone" placeholder="Phone Number (Whatsapp)"/>
               </div>
               <Select>
                 <SelectTrigger className="w-full">
