@@ -28,9 +28,17 @@ const info = [
 ];
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 
 const contact = () => {
+  const [firstname, setFirstName] = useState{initialState:''}
+  const [lastname, setLastName] = useState{initialState:''}
+  const [email, setEmail] = useState{initialState:''}
+  const [phone, setPhone] = useState{initialState:''}
+  const [service, setService] = useState{initialState:''}
+  const [message, setMessage] = useState{initialState:''}
+
   return (
     <motion.section  initial={{opacity: 0}} 
     animate={{opacity: 1, transition: {delay: 2.4, duration: 0.4, ease: 'easeIn'}}}
@@ -44,12 +52,12 @@ const contact = () => {
               <p className="text-white/60">Let's work together! I'm ready to leverage my extensive skills in web design, UI/UX, and multimedia production to help achieve your project goals with innovative and effective digital solutions.</p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="First Name"/>
-                <Input type="lastname" placeholder="Last Name"/>
-                <Input type="email" placeholder="Email Address"/>
-                <Input type="phone" placeholder="Phone Number (Whatsapp)"/>
+                <Input value="frstname" onChange={e => {setFirstName(e.target.value)}} type="firstname" placeholder="First Name"/>
+                <Input value="lastname" onChange={e => {setLastName(e.target.value)}} type="lastname" placeholder="Last Name"/>
+                <Input value="email" onChange={e => {setEmail(e.target.value)}} type="email" placeholder="Email Address"/>
+                <Input value="phone" onChange={e => {setPhone(e.target.value)}} type="phone" placeholder="Phone Number (WhatsApp)"/>
               </div>
-              <Select>
+              <Select >
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a service">
 
@@ -57,16 +65,15 @@ const contact = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectLabel>Select a Service</SelectLabel>
-                    <SelectItem value="est">Web Developement</SelectItem>
-                    <SelectItem value="cst">UI/UX Design</SelectItem>
-                    <SelectItem value="est">Social Media Design</SelectItem>
+                    <SelectLabel >Select a Service</SelectLabel>
+                    <SelectItem value="wdev" >Web Developement</SelectItem>
+                    <SelectItem value="uiux">UI/UX Design</SelectItem>
+                    <SelectItem value="smd">Social Media Design</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
               {/* text area */}
-              <Textarea className="h-[200px]"
-              placeholder="Type Your message Here"/>
+              <Textarea  value="message" className="h-[200px]"placeholder="Type Your message Here"/>
               <Button size="sm" className="max-w-40">Send message</Button>
             </form>
           </div>
