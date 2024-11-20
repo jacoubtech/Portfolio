@@ -9,7 +9,7 @@ import {SiTailwindcss, SiNextdotjs} from "react-icons/si";
 
 const about = {
   title: 'About me',
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam totam exercitationem unde esse numquam quas incidunt optio.",
+  description: "I am a multifaceted professional with a strong educational background in computer science and networking, enhanced by specialized skills in digital media and advertising. My experience spans web design, front-end development, UI/UX design, and multimedia production, making me proficient in delivering comprehensive digital solutions.",
   info: [
     {
       fieldName: 'Name',
@@ -50,7 +50,7 @@ const about = {
 const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My Experience",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam totam exercitationem unde esse numquam quas incidunt optio.",
+  description: "With years of expertise in digital media and technology, I am a seasoned professional skilled in web design, front-end development, UI/UX design, and multimedia production, including photography, videography, and video editing.",
   items: [
     {
     company: "Esaboura",
@@ -99,7 +99,7 @@ const experience = {
   const education = {
     icon: "/assets/resume/badge.svg",
     title: "My Education",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam totam exercitationem unde esse numquam quas incidunt optio.",
+    description: "I hold a Licence Diploma in Computer Science and a Master Diploma in Networking and Distributed Systems from Ferhat Abbas University, complemented by a Diploma in Meta Ads for Facebook & Instagram from Esaboura.",
     items: [
       {
       institution: "Ferhat Abbas University",
@@ -122,7 +122,7 @@ const experience = {
     // Skills Data
   const skills = {
     title: "My skills",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam totam exercitationem unde esse numquam quas incidunt optio.",
+    description: "I possess a robust skill set that includes web design, front-end development, UI/UX design, multimedia production (photography, videography, video editing), networking, and expertise in Meta advertising platforms.",
     skillslist: [
       {
         icon: <FaHtml5 />,

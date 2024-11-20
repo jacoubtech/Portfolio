@@ -1,11 +1,12 @@
 import Link from "next/link";
-import { FaGithub, FaLinkedinIn, FaYoutube, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaYoutube, FaTwitter, FaInstagram, FaFacebook } from 'react-icons/fa';
 
 const socials = [
-  { icon: <FaGithub />, path: '' },
-  { icon: <FaLinkedinIn />, path: '' },
-  { icon: <FaYoutube />, path: '' },
-  { icon: <FaTwitter />, path: '' }
+  { icon: <FaGithub />, path: 'https://github.com/jacoubtech' },
+  { icon: <FaLinkedinIn />, path: 'https://www.linkedin.com/in/fortas-n-158717109/' },
+  { icon: <FaYoutube />, path: 'https://www.youtube.com/@designup8141' },
+  { icon: <FaInstagram />, path: 'https://www.instagram.com/e.parker8520/profilecard/?igsh=bmFkY2FweGlsa3Uz' },
+  { icon: <FaFacebook />, path: 'https://www.facebook.com/profile.php?id=100091212901350' }
 ];
 
 const Social = ( ) => {

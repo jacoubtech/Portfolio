@@ -22,9 +22,9 @@ const projects = [
     num: '01',
     category: 'ui/ux',
     title: 'Project 1',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    description: 'An ecommerce Website',
     stack: [
-      {name:"Html 5"}, {name:"Css 3 "} ,{name:"JavaScript"}],
+      {name:"Figma"},],
     image: '/assets/work/MkTech.png',
     live: "",
     github: "",
@@ -33,7 +33,7 @@ const projects = [
     num: '02',
     category: 'ui/ux',
     title: 'Project 2',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    description: 'Web and mobile design for a furniture company',
     stack: [
       {name:"Figma"}, {name:"webview"} ,{name:"Adobe Illustraor"}],
     image: '/assets/work/thumb1.png',
@@ -44,9 +44,9 @@ const projects = [
     num: '03',
     category: 'frontend',
     title: 'Project 3',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    description: 'Photos showing website ',
     stack: [
-      {name:"Html 5"}, {name:"Css 3"} ,{name:"JavaScript"}],
+      {name:"Html 5"}, {name:"Css 3"} ,{name:"JavaScript"}, {name: "NextJS Framework"}],
     image: '/assets/work/thumb3.png',
     live: "",
     github: "",

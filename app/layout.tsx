@@ -28,7 +28,7 @@ const jetbrainsMono = JetBrains_Mono({subsets: ["latin"],
 variable : "--font-jetbrainsMono",
 })
 export const metadata: Metadata = {
-  title: "Islem Tech Portfolio",
+  title: "Islem Fortas Portfolio",
   description: "Welcome to my portfolio, do not forget to say HELLO!",
 };
 

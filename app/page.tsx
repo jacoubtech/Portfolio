@@ -12,7 +12,7 @@ const Home = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">NextJS Developer</span>
+            <span className="text-xl">Frontend Developer</span>
             <h1 className="h1 mb-6">
               Hello I&apos;m <br/> <span className="text-accent">Fortas Islem</span>
             </h1>
@@ -22,10 +22,10 @@ const Home = () => {
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
-                <span>Download CV</span>
+            <a href="Fortas Nour El Islem Yaakoub CV.pdf"> <Button variant="outline" size="lg" className="uppercase flex items-center gap-2" >
+                <span> Download CV </span>
                 <FiDownload className="text-xl"/>
-              </Button>
+              </Button></a>
               <div className="mb-8 xl:mb-0">
                 <Social />
               </div>
