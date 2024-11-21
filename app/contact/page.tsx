@@ -28,16 +28,51 @@ const info = [
 ];
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 
 
-const contact = () => {
-  const [firstname, setFirstName] = useState{initialState:''}
-  const [lastname, setLastName] = useState{initialState:''}
-  const [email, setEmail] = useState{initialState:''}
-  const [phone, setPhone] = useState{initialState:''}
-  const [service, setService] = useState{initialState:''}
-  const [message, setMessage] = useState{initialState:''}
+const contact = async () => {
+  const [firstname, setFirstName] = useState('');
+const [lastname, setLastName] = useState('');
+const [email, setEmail] = useState('');
+const [phone, setPhone] = useState('');
+const [service, setService] = useState('');
+const [message, setMessage] = useState('');
+
+
+  
+  const hundleSubmit = async (e:FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form ={
+      firstname,
+      lastname,
+      email,
+      phone,
+      service,
+      message,
+    }
+    // submit via api 
+    console.log(form);
+  
+  const respense = await fetch('/api/submit', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify(form) 
+  })
+
+  const Content =  await respense.json();
+  console.log(Content);
+  alert(Content.data.tableRange);//+
+}
+  setFirstName('')
+  setLastName('')
+  setEmail('')
+  setPhone('')
+  setService('')
+  setMessage('')
 
   return (
     <motion.section  initial={{opacity: 0}} 
@@ -47,12 +82,12 @@ const contact = () => {
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* form */}
           <div className="xl:w-[54%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl" onSubmit={hundleSubmit}>
               <h3 className="text-4xl text-accent">Let's work together</h3>
               <p className="text-white/60">Let's work together! I'm ready to leverage my extensive skills in web design, UI/UX, and multimedia production to help achieve your project goals with innovative and effective digital solutions.</p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input value="frstname" onChange={e => {setFirstName(e.target.value)}} type="firstname" placeholder="First Name"/>
+                <Input value="firstname" onChange={e => {setFirstName(e.target.value)}} type="firstname" placeholder="First Name"/>
                 <Input value="lastname" onChange={e => {setLastName(e.target.value)}} type="lastname" placeholder="Last Name"/>
                 <Input value="email" onChange={e => {setEmail(e.target.value)}} type="email" placeholder="Email Address"/>
                 <Input value="phone" onChange={e => {setPhone(e.target.value)}} type="phone" placeholder="Phone Number (WhatsApp)"/>
