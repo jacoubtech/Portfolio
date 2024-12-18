@@ -54,10 +54,18 @@ const contact = () => {
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="text" placeholder="First Name" />
-                <Input type="text" placeholder="Last Name" />
-                <Input type="email" placeholder="Email Address" />
-                <Input type="text" placeholder="Phone Number (WhatsApp)" />
+                <Input type="text" placeholder="First Name" name="FirstName" />
+                <Input type="text" placeholder="Last Name" name="LastName" />
+                <Input
+                  type="email"
+                  placeholder="Email Address"
+                  name="Email_Address"
+                />
+                <Input
+                  type="text"
+                  placeholder="Phone Number (WhatsApp)"
+                  name="Phone_Number_(WhatsApp)"
+                />
               </div>
               <Select /*onValueChange={value => setService(value)}*/>
                 <SelectTrigger className="w-full">
